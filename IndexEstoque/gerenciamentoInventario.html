@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto - Gerenciamento de Estoque</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="/visual/cadastro.css">
+
+</head>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+                
+                <div class="card card-form">
+                    <div class="card-header card-header-custom text-center">
+                        <h2><i class="bi bi-box-seam"></i> Cadastro de Novo Produto</h2>
+                    </div>
+                    
+                    <div class="card-body p-4 p-md-5">
+                        
+                        <form action="#" method="POST">
+                            
+                            <div class="row">
+                                <div class="col-md-8 mb-3">
+                                    <label for="nomeProduto" class="form-label">Nome do Produto *</label>
+                                    <input type="text" class="form-control" id="nomeProduto" name="nomeProduto" required>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="sku" class="form-label">SKU / Código *</label>
+                                    <input type="text" class="form-control" id="sku" name="sku" placeholder="ex: PROD-001" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="descricao" class="form-label">Descrição do Produto</label>
+                                <textarea class="form-control" id="descricao" name="descricao" rows="3" placeholder="Detalhes, especificações, cor, tamanho..."></textarea>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="categoria" class="form-label">Categoria *</label>
+                                    <select class="form-select" id="categoria" name="categoria" required>
+                                        <option value="" selected disabled>Selecione uma categoria...</option>
+                                        <option value="calças">calças</option>
+                                        <option value="bermudas">bermudas</option>
+                                        <option value="Oculos">Oculos</option>
+                                        <option value="calçados">calçados</option>
+                                        <option value="camiseta">camiseta</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="fornecedor" class="form-label">Fornecedor</label>
+                                    <input type="text" class="form-control" id="fornecedor" name="fornecedor" placeholder="Nome do fornecedor principal">
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="quantidade" class="form-label">Qtd. em Estoque *</label>
+                                    <input type="number" class="form-control" id="quantidade" name="quantidade" value="0" min="0" required>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="precoCusto" class="form-label">Preço de Custo (R$)</label>
+                                    <input type="number" class="form-control" id="precoCusto" name="precoCusto" step="0.01" min="0" placeholder="0,00">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="precoVenda" class="form-label">Preço de Venda (R$) *</label>
+                                    <input type="number" class="form-control" id="precoVenda" name="precoVenda" step="0.01" min="0" placeholder="0,00" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="imagemProduto" class="form-label">Imagem do Produto</label>
+                                <input class="form-control" type="file" id="imagemProduto" name="imagemProduto" accept="image/png, image/jpeg">
+                            </div>
+
+                            <hr>
+
+                            <div class="form-buttons">
+                                <button type="reset" class="btn btn-secondary me-2">
+                                    <i class="bi bi-x-lg"></i> Limpar
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="bi bi-check-lg"></i> Cadastrar Produto
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
